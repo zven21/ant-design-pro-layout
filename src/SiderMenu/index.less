@@ -99,6 +99,8 @@
     background: @layout-sider-background;
   }
   .ant-menu-inline-collapsed {
+    color: red;
+    background-color: red;
     & > .ant-menu-item .sider-menu-item-img + span,
     &
       > .ant-menu-item-group
@@ -124,6 +126,17 @@
   .ant-drawer-body {
     padding: 0;
   }
+}
+
+.ant-menu-inline-collapsed {
+  width: 100%;
+  > .ant-menu-item,
+  > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding: 0 16px !important;
+  }
+}
+.ant-pro-sider-menu-logo {
+  padding: 0 10px !important;
 }
 
 @keyframes fade-in {

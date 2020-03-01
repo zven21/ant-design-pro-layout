@@ -92,12 +92,13 @@ const SiderMenu: React.FC<SiderMenuProps> = props => {
   return (
     <Sider
       collapsible
+      collapsedWidth="50"
       trigger={null}
       collapsed={collapsed}
       breakpoint={breakpoint === false ? undefined : breakpoint}
-      onCollapse={collapse => {
+      onCollapse={(collapse, type) => {
         if (!isMobile) {
-          if (onCollapse) {
+          if (onCollapse && type === 'clickTrigger') {
             onCollapse(collapse);
           }
         }
